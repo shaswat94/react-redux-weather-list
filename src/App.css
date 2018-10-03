@@ -30,3 +30,8 @@
     transform: rotate(360deg);
   }
 }
+
+.input-field{
+  display: inline-block;
+  width: 50%;
+}
