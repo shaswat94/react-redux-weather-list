@@ -11,11 +11,11 @@ import App from './App';
 import reducers from './reducers';
 import * as serviceWorker from './serviceWorker';
 
-//const store = createStore(reducers, applyMiddleware(ReduxPromise));
-const createStoreWithMiddleware = applyMiddleware(ReduxPromise)(createStore);
+const store = createStore(reducers, applyMiddleware(ReduxPromise));
+//const createStoreWithMiddleware = applyMiddleware(ReduxPromise)(createStore);
 
 ReactDOM.render(
-    <Provider store={createStoreWithMiddleware(reducers)}>
+    <Provider store={store}>
       <App />
     </Provider>
     , document.getElementById('root'));
